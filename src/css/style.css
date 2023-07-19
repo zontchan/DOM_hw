@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.wrapper{
+    width: 99vw;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.score{
+    display: flex;
+}
+.wins{
+    margin-right: 100px;
+}
+.container{
+   display: grid;
+    grid-template-columns: repeat(4,1fr);
+
+    width: 500px;
+    height: 500px;
+    background-color: #fcc;
+}
+
+.field{
+    border: 1px solid black;
+    text-align: -webkit-center;
+}
+
+.goblin{
+    background-image: url("../img/goblin.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}

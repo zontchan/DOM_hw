@@ -50,4 +50,6 @@ module.exports = {
     },
 
     mode: 'development', // Режим сборки
+
+
 };
