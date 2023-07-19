@@ -4,9 +4,11 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 
 module.exports = {
+    target: 'web',
     entry: './src/index.js',
     output: {
         path: path.resolve(__dirname, 'dist'),
+        publicPath: '',
     },
     module: {
         rules: [
@@ -17,6 +19,13 @@ module.exports = {
                         loader: 'html-loader',
                     },
                 ],
+            },
+            {
+                test: /\.m?js$/,
+                exclude: /(node_modules|bower_components)/,
+                use: {
+                    loader: "babel-loader"
+                }
             },
             {
                 test: /\.css$/,
@@ -35,7 +44,6 @@ module.exports = {
         new HtmlWebPackPlugin({
             template: './src/index.html',
             filename: './index.html',
-            minify: false,
         }),
         new MiniCssExtractPlugin({
             filename: '[name].css',
@@ -48,8 +56,5 @@ module.exports = {
         },
         open: true, // Автоматически открывать браузер
     },
-
-    mode: 'development', // Режим сборки
-
 
 };
