@@ -1,4 +1,4 @@
-
+[![Build status](https://ci.appveyor.com/api/projects/status/l583rh27s8ibbkaa?svg=true)](https://ci.appveyor.com/project/zontchan/dom-hw)
 Правила сдачи задания:
 
 1. **Важно**: в рамках этого ДЗ можно использовать любой менеджер пакетов
