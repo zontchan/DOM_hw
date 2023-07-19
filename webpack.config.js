@@ -1,11 +1,12 @@
 const path = require('path');
+require("es6-promise").polyfill();
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 
 module.exports = {
     target: 'web',
-    entry: './src/index.js',
+    entry: ["whatwg-fetch", "babel-polyfill", "./src/index.js"],
     output: {
         path: path.resolve(__dirname, 'dist'),
         publicPath: '',
